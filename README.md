@@ -58,3 +58,25 @@ nCalculator 25 is a modern calculator application designed for simplicity and sp
 1. Clone the repository:
    ```bash
    git clone https://github.com/moustyb/new_calculator_25.git
+
+
+
+
+
+
+--
+License
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+Contact
+Moustyb
+
+GitHub: moustyb
+Email: mbay.dev@gmail.com
+Project: www.ncalculator.work.gd
+Acknowledgments
+Inspired by Material Design principles
+UI components adapted from Material Design Icons
+Thanks to awesome-readme for template inspiration
+Special thanks to all contributors
+✨ No ads, no tracking, just pure calculation. Made with ❤️ for everyday use. 
