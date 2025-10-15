@@ -3,93 +3,64 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Science Calculator</title>
+  <title>Scientific Calculator</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <main class="calculator" aria-label="Scientific calculator">
+  <main class="calculator">
     <header class="calc-header">
-      <h1>Science Calculator</h1>
-      <p class="subtitle">Clean UI • Keyboard friendly • Safe math</p>
+      <h1>Scientific Calculator</h1>
+      <p class="subtitle">Clean • Responsive • Scientific</p>
     </header>
 
-    <section class="display" aria-live="polite">
-      <label for="expression" class="sr-only">Expression</label>
-      <input
-        id="expression"
-        class="expr-input"
-        type="text"
-        inputmode="numeric"
-        placeholder="Type: sin(30) + sqrt(16) / 2"
-        autocomplete="off"
-        aria-describedby="result"
-      />
-      <div id="result" class="live-result" aria-label="Live result">= 0</div>
-      <div class="toast" role="status" aria-live="assertive" hidden></div>
+    <section class="display">
+      <input id="expression" class="expr-input" type="text" placeholder="0" readonly />
     </section>
 
-    <section class="keypad" aria-label="Calculator keys">
-      <div class="key-group">
-        <h2 class="group-title">Numbers</h2>
-        <div class="keys-grid">
-          <button data-key="7">7</button>
-          <button data-key="8">8</button>
-          <button data-key="9">9</button>
-          <button data-key="4">4</button>
-          <button data-key="5">5</button>
-          <button data-key="6">6</button>
-          <button data-key="1">1</button>
-          <button data-key="2">2</button>
-          <button data-key="3">3</button>
-          <button data-key="0" class="wide">0</button>
-          <button data-key=".">.</button>
-          <button data-key="(">(</button>
-          <button data-key=")">)</button>
-        </div>
-      </div>
+    <section class="keypad">
+      <!-- Row 1 -->
+      <button class="action" data-action="clear">AC</button>
+      <button class="action" data-action="backspace">⌫</button>
+      <button class="func" data-key="(">(</button>
+      <button class="func" data-key=")">)</button>
 
-      <div class="key-group">
-        <h2 class="group-title">Operators</h2>
-        <div class="keys-grid">
-          <button data-key="+">+</button>
-          <button data-key="-">−</button>
-          <button data-key="*">×</button>
-          <button data-key="/">÷</button>
-          <button data-key="^">xʸ</button>
-          <button data-action="equals" class="accent">=</button>
-        </div>
-      </div>
+      <!-- Row 2 -->
+      <button class="func" data-key="sin(">sin</button>
+      <button class="func" data-key="cos(">cos</button>
+      <button class="func" data-key="tan(">tan</button>
+      <button class="op" data-key="/">÷</button>
 
-      <div class="key-group">
-        <h2 class="group-title">Functions</h2>
-        <div class="keys-grid">
-          <button data-key="sin(">sin</button>
-          <button data-key="cos(">cos</button>
-          <button data-key="tan(">tan</button>
-          <button data-key="log(">log</button>
-          <button data-key="ln(">ln</button>
-          <button data-key="sqrt(">√</button>
-          <button data-key="pi">π</button>
-          <button data-key="e">e</button>
-        </div>
-      </div>
+      <!-- Row 3 -->
+      <button class="func" data-key="log(">log</button>
+      <button class="func" data-key="ln(">ln</button>
+      <button class="func" data-key="sqrt(">√</button>
+      <button class="op" data-key="*">×</button>
 
-      <div class="key-group">
-        <h2 class="group-title">Memory</h2>
-        <div class="keys-grid">
-          <button data-action="clear" class="warn">C</button>
-          <button data-action="backspace">⌫</button>
-          <button data-action="ms">MS</button>
-          <button data-action="mr">MR</button>
-        </div>
-      </div>
+      <!-- Row 4 -->
+      <button data-key="7">7</button>
+      <button data-key="8">8</button>
+      <button data-key="9">9</button>
+      <button class="op" data-key="-">−</button>
+
+      <!-- Row 5 -->
+      <button data-key="4">4</button>
+      <button data-key="5">5</button>
+      <button data-key="6">6</button>
+      <button class="op" data-key="+">+</button>
+
+      <!-- Row 6 -->
+      <button data-key="1">1</button>
+      <button data-key="2">2</button>
+      <button data-key="3">3</button>
+      <button class="op" data-key="^">xʸ</button>
+
+      <!-- Row 7 -->
+      <button class="zero" data-key="0">0</button>
+      <button data-key=".">.</button>
+      <button class="func" data-key="pi">π</button>
+      <button class="equals" data-action="equals">=</button>
     </section>
-
-    <footer class="calc-footer">
-      <small>Keyboard: Enter = equals, Backspace = delete, ^ for power</small>
-    </footer>
   </main>
-
   <script src="app.js"></script>
 </body>
 </html>
