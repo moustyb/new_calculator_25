@@ -12,23 +12,26 @@
   --muted: #9aa0b8;
 }
 
-* { box-sizing: border-box; }
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: "Inter", system-ui, sans-serif;
-  background: var(--bg);
+  background-color: var(--bg);
   color: var(--text);
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .calculator {
-  background: var(--panel);
+  background-color: var(--panel);
   padding: 20px;
   border-radius: 16px;
-  box-shadow: 0 12px 40px rgba(0,0,0,0.4);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
   width: 360px;
 }
 
@@ -36,10 +39,12 @@ body {
   text-align: center;
   margin-bottom: 12px;
 }
+
 .calc-header h1 {
   margin: 0;
   font-size: 20px;
 }
+
 .subtitle {
   margin: 0;
   font-size: 12px;
@@ -47,16 +52,17 @@ body {
 }
 
 .display {
-  background: #10121c;
+  background-color: #10121c;
   border-radius: 12px;
   padding: 12px;
   margin-bottom: 16px;
 }
+
 .expr-input {
   width: 100%;
   font-size: 28px;
   border: none;
-  background: transparent;
+  background-color: transparent;
   color: var(--text);
   text-align: right;
   outline: none;
@@ -67,35 +73,47 @@ body {
   grid-template-columns: repeat(4, 1fr);
   gap: 10px;
 }
+
 .keypad button {
-  background: var(--btn);
+  background-color: var(--btn);
   border: none;
   border-radius: 12px;
   padding: 18px;
   font-size: 16px;
   color: var(--text);
   cursor: pointer;
-  transition: background 0.2s, transform 0.1s;
+  transition: background-color 0.2s, transform 0.1s;
 }
-.keypad button:hover { background: var(--btn-hover); }
-.keypad button:active { transform: scale(0.96); }
+
+.keypad button:hover {
+  background-color: var(--btn-hover);
+}
+
+.keypad button:active {
+  transform: scale(0.96);
+}
 
 .keypad .op {
-  background: var(--op);
+  background-color: var(--op);
 }
+
 .keypad .op:hover {
-  background: var(--op-hover);
+  background-color: var(--op-hover);
 }
+
 .keypad .func {
-  background: var(--func);
+  background-color: var(--func);
 }
+
 .keypad .func:hover {
-  background: var(--func-hover);
+  background-color: var(--func-hover);
 }
+
 .keypad .equals {
-  background: var(--accent);
+  background-color: var(--accent);
   color: #0f111a;
 }
+
 .keypad .zero {
   grid-column: span 2;
 }
