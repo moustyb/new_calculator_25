@@ -32,7 +32,7 @@ body {
   padding: 20px;
   border-radius: 16px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-  width: 360px;
+  width: 320px; /* Slightly narrower to fit 4 columns */
 }
 
 .calc-header {
@@ -71,7 +71,7 @@ body {
 
 .keypad {
   display: grid;
-  grid-template-columns: repeat(5, 1fr); /* 5-column grid */
+  grid-template-columns: repeat(4, 1fr); /* 4-column grid */
   gap: 10px;
 }
 
