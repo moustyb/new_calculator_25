@@ -12,10 +12,13 @@ keypad.addEventListener("click", (e) => {
     if (key === "pi") {
       exprInput.value += "Math.PI";
     } else if (["sin(", "cos(", "tan(", "log(", "ln(", "sqrt("].includes(key)) {
-      // map to Math functions
-      if (key === "ln(") exprInput.value += "Math.log(";
-      else if (key === "log(") exprInput.value += "Math.log10(";
-      else exprInput.value += "Math." + key;
+      if (key === "ln(") {
+        exprInput.value += "Math.log(";
+      } else if (key === "log(") {
+        exprInput.value += "Math.log10(";
+      } else {
+        exprInput.value += "Math." + key;
+      }
     } else if (key === "^") {
       exprInput.value += "**";
     } else {
@@ -30,9 +33,16 @@ keypad.addEventListener("click", (e) => {
         exprInput.value = exprInput.value.slice(0, -1);
         break;
       case "equals":
+        let expr = exprInput.value.trim();
+        if (!expr) {
+          exprInput.value = "0";
+          break;
+        }
         try {
-          exprInput.value = eval(exprInput.value);
-        } catch {
+          // Evaluate the expression safely
+          const result = new Function("return " + expr)();
+          exprInput.value = isNaN(result) || !isFinite(result) ? "Error" : result;
+        } catch (error) {
           exprInput.value = "Error";
         }
         break;
