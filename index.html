@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>NCalculator</title>
+  <title>N Calculator</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <main class="calculator">
     <header class="calc-header">
-      <h1>Scientific Calculator</h1>
+      <h1>N Calculator</h1>
       <p class="subtitle">Clean • Responsive • Scientific</p>
     </header>
 
@@ -19,47 +19,54 @@
     </section>
 
     <section class="keypad">
-      <!-- Row 1 -->
+      <!-- Row 1: Clear and Backspace -->
       <button class="action" data-action="clear">AC</button>
       <button class="action" data-action="backspace">⌫</button>
       <button class="func" data-key="(">(</button>
       <button class="func" data-key=")">)</button>
+      <button class="func" data-key="pi">π</button>
 
-      <!-- Row 2 -->
+      <!-- Row 2: Trigonometric Functions -->
       <button class="func" data-key="sin(">sin</button>
       <button class="func" data-key="cos(">cos</button>
       <button class="func" data-key="tan(">tan</button>
-      <button class="op" data-key="/">÷</button>
+      <button class="op" data-key="+">+</button>
+      <button class="op" data-key="-">−</button>
 
-      <!-- Row 3 -->
+      <!-- Row 3: Logarithmic and Root Functions -->
       <button class="func" data-key="log(">log</button>
       <button class="func" data-key="ln(">ln</button>
       <button class="func" data-key="sqrt(">√</button>
       <button class="op" data-key="*">×</button>
+      <button class="op" data-key="/">÷</button>
 
-      <!-- Row 4 -->
+      <!-- Row 4: Numbers 7-9 -->
       <button data-key="7">7</button>
       <button data-key="8">8</button>
       <button data-key="9">9</button>
-      <button class="op" data-key="-">−</button>
+      <button class="op" data-key="^">xʸ</button>
+      <button class="empty"></button>
 
-      <!-- Row 5 -->
+      <!-- Row 5: Numbers 4-6 -->
       <button data-key="4">4</button>
       <button data-key="5">5</button>
       <button data-key="6">6</button>
-      <button class="op" data-key="+">+</button>
+      <button class="empty"></button>
+      <button class="empty"></button>
 
-      <!-- Row 6 -->
+      <!-- Row 6: Numbers 1-3 -->
       <button data-key="1">1</button>
       <button data-key="2">2</button>
       <button data-key="3">3</button>
-      <button class="op" data-key="^">xʸ</button>
+      <button class="empty"></button>
+      <button class="empty"></button>
 
-      <!-- Row 7 -->
+      <!-- Row 7: Zero, Decimal, and Equals -->
       <button class="zero" data-key="0">0</button>
       <button data-key=".">.</button>
-      <button class="func" data-key="pi">π</button>
       <button class="equals" data-action="equals">=</button>
+      <button class="empty"></button>
+      <button class="empty"></button>
     </section>
   </main>
   <script src="script.js"></script>
